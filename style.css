@@ -44,6 +44,9 @@ a{
 .title p{
     text-transform: capitalize;
 }
+.title .logo{
+    width: 100px;
+}
 ul{
     list-style: none;
 }
@@ -423,6 +426,136 @@ header.scrolled{
     height: auto; /* Giữ tỷ lệ khung hình */
     display: block; /* Loại bỏ khoảng cách thừa dưới ảnh */
     margin: 0 auto;
+}
+
+.shop{
+    background-image: url(img/bg.jpg);
+    margin: 2rem 0;
+    padding: 2rem 1rem;
+}
+.shop .row{
+    display: flex;
+    justify-content: space-between;
+}
+.shop .row .top-footer{
+    margin-top: 1rem ;
+    margin-left: 1rem;
+    text-align: center !important;
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    padding: 3rem 1rem;
+}
+.shop .row .img_about{
+    margin-left: 1rem;
+}
+.shop .row .img_basil{
+    margin-left: 1rem;
+    width: 100%; /* Ảnh sẽ tự động co giãn theo chiều rộng của khung */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    display: block; /* Loại bỏ khoảng cách thừa dưới ảnh */
+    /* margin: 0 auto; */
+    margin-bottom: 3rem;
+
+}
+.shop .box-container{
+    
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+}
+.shop .box-container .box{
+    margin: 1rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    background-color: #fff;
+}
+.shop .box-container img{
+    width: 100%;    
+}
+
+.shop .btn{
+    position: absolute;
+    left: 30%;
+    bottom: -3%;
+}
+img{
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá container */
+    height: auto; 
+}
+.shop-category .box{
+    position: relative;
+    color: #fff;
+}
+.shop-category .detail{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    line-height: 2;
+    text-align: center;
+}
+.shop-category .detail h1,
+.shop-category .detail span{
+    font-size: 1.3rem;
+}
+.shop-category .box.box1,
+.shop-category .box.box2{
+    margin: 0 10px;
+}
+.services{
+    padding: 3rem 0;
+    text-align: center;
+    background-image: url(img/bg.jpg);
+    line-height: 2;
+    margin: 3rem 0;
+}
+.services h3{
+    text-transform: capitalize;
+    color: var(--green);
+}
+.services img{
+    width: 30%;
+}
+
+
+.brand .box-container {
+    margin-bottom: 30px;
+    display: flex; /* Sử dụng flexbox để xếp ngang */
+    justify-content: center; /* Căn giữa các box */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 70px; /* Khoảng cách giữa các box */
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+}
+/* ------------------------------about-section-------------------------------------- */
+.about-category{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    margin: 2rem auto;
+}
+.about-category .box{
+    position: relative;
+    margin: 1rem;
+    box-shadow: var(--box-shadow);
+}
+.about-category .box img{
+    width: 60%;
+}
+.about-category .box:nth-child(2) img{
+    width: 75%;
+}
+.about-category .box .detail{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.about-category .box .detail h1{
+    margin-bottom: 1.5rem;
+}
+.about-category .box .detail span{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #555;
+}
+.about-category .box .detail .btn{
+    opacity: .6;
 }
 /* ------------------------------footer-section-------------------------------------- */
 .top-footer{
