@@ -95,6 +95,78 @@
                 </div>
             </div>
         </section>
+        <!-- about -->
+        <div class="about">
+            <div class="row">
+                <div class="img-box">
+                    <img src="img/3.png" alt="">
+                </div>
+                <div class="detail">
+                    <h1>visit our beatiful showroom!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. per distinctio culpa excepturi quidem.
+                    Laborum explicabo, molestias sequi optio aperiam, pe, sed atque eligendi earum animi dolor rem la
+                    Dolores consequuntur voluptatum praibus corporis nemo libero facere et iusto, autem s
+                    Illo asperiores dism adipisci vitae veniam. Accusantium repellat itaque quae in.</p>
+                    <a href="view_products.php" class="btn">shop now</a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="testimonial-container">
+            <div class="title">
+                <img src="img/download.png" alt="">
+                <h1>what people say about us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo numquam distinctio inventore? 
+                    Eligendi, 
+                    quae. Quia!
+                </p>
+            </div>
+                <div class="container">
+                    <div class="testimonial-item ">
+                        <img src="img/01.jpg" alt="">
+                        <h1>sara smith</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem.
+                        Vero cum totam voluptates ad quod sequi laudantium itaque?
+                        Ut ad facilis eos repudiandae dicta omnis iusto magni?
+                        Voluptatum minima vitae, ratione alias veniam hic optio voluptates.</p>
+                    </div>
+                    <div class="testimonial-item active">
+                        <img src="img/02.jpg" alt="">
+                        <h1>john smith</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem.
+                        Vero cum totam voluptates ad quod sequi laudantium itaque?
+                        Ut ad facilis eos repudiandae dicta omnis iusto magni?
+                        Voluptatum minima vitae, ratione alias veniam hic optio voluptates.</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="img/03.jpg" alt="">
+                        <h1>selena ansari</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem.
+                        Vero cum totam voluptates ad quod sequi laudantium itaque?
+                        Ut ad facilis eos repudiandae dicta omnis iusto magni?
+                        Voluptatum minima vitae, ratione alias veniam hic optio voluptates.</p>
+                    </div>
+                    <div class="left-arrow" onclick="nextSlide()"><i class="bx bxs-left-arrow-alt"></i></div>
+                    <div class="right-arrow" onclick="prevSlide()"><i class="bx bxs-right-arrow-alt"></i></div>
+                    <script>
+                        let slides = document.querySelectorAll('.testimonial-item');
+                        let index = 1;
+
+                        function nextSlide() {
+                            slides[index].classList.remove('active');
+                            index = (index + 1) % slides.length;
+                            slides[index].classList.add('active');
+                        }
+
+                        function prevSlide() {
+                            slides[index].classList.remove('active');
+                            index = (index - 1 + slides.length) % slides.length;
+                            slides[index].classList.add('active');
+                        }
+                </script>
+                </div>
+        </div>
+
         <?php include 'components/footer.php'; ?>
 
     </div>
